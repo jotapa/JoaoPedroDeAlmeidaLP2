@@ -10,9 +10,9 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
+            string c, p, modelo, t;
+            double km, cv;
             int n;
-            string modelo, p, tipo;
-            double km,cv;
 
             Console.WriteLine("Informe o número de veículos no galpão");
             n = Convert.ToInt32(Console.ReadLine());
@@ -27,49 +27,49 @@ namespace ConsoleApplication1
 
                 Console.WriteLine("Qual a potência do motor?");
                 cv = Double.Parse(Console.ReadLine());
+            }
+                
 
-                if (km <= 5000)
+            c = classificar;
+            Console.WriteLine("{0} - {1} - {2}", modelo, t, p);
+        }
+
+
+        static string classificar(string modelo; string t; string p;)
+        {
+            string tipo, p;
+            int km, cv;
+            
+            if (km <= 5000)
                 {
-                    tipo = "novo";
+                        tipo = "novo";
                 }
                 else if (km > 5000 && km <= 30000)
                 {
-                    tipo = "semi novo";
+                        tipo = "semi novo";
                 }
                 else
                 {
-                    tipo = "velho";
+                       tipo = "velho";
                 }
+            
+              if (cv > 200)
+              {
+                        p = "potente";
+              }
+              else if (cv >= 120 && cv <= 200)
+              {
+                        p = "forte";
+              }
+              else
+              {
+                        p = "popular";
+              }
+                return tipo, p;
+        
+       }
 
-                if (cv > 200)
-                {
-                    p = "potente";
-                }
-                else if (cv >= 120 && cv <= 200)
-                {
-                    p = "forte";
-                }
-                else
-                {
-                    p = "popular";
-                }
-
-                Console.WriteLine("{0} - {1} - {2}", modelo, tipo, p);
-            }
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-        }
+       
     }
+}
 
