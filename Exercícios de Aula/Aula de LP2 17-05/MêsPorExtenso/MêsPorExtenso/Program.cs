@@ -10,70 +10,66 @@ namespace MêsPorExtenso
     {
         static void Main(string[] args)
         {
-            int d, m, a;
-            string data;
+            string data, d, m, a;
 
-            string dt = Console.ReadLine();
-            string sóMês = data.Substring(4,2);
+            data = Console.ReadLine();
 
-            
+            d = data.Substring(0, 2);
+            m = data.Substring(3, 2);
+            a = data.Substring(6, 4);
+
             switch (m)
             {
-                case 01:
-
-                    data = "janeiro";
-
+                case "01":
+                    m = "Janeiro";
                     break;
 
-                case 02:
-                    data = "fevereiro";
-
-                    break;
-                   
-                case 03:
-                    
-                    data = "março";
+                case "02":
+                    m = "Fevereiro";
                     break;
 
-                case 04:
-                    
-                    data = "abril";
+                case "03":
+                    m = "Março";
                     break;
 
-                case 05:
-                    data = "maio";
+                case "04":
+                    m = "Abril";
                     break;
 
-                case 06:
-                    data = "junho";
+                case "05":
+                    m = "Maio";
                     break;
 
-                case 07:
-                    data = "julho";
+                case "06":
+                    m = "Junho";
                     break;
 
-                case 08: 
-                    data = "agosto";
+                case "07":
+                    m = "Julho";
                     break;
 
-                case 09:
-                    data = "setembro";
+                case "08":
+                    m = "Agosto";
                     break;
 
-                case 10:
-                    data = "outubro";
+                case "09":
+                    m = "Setembro";
                     break;
 
-                case 11:
-                    data = "novembro";
+                case "10":
+                    m = "Outubro";
                     break;
 
-                case 12:
-                    data = "dezembro";
+                case "11":
+                    m = "Novembro";
                     break;
 
+                case "12":
+                    m = "Dezembro";
+                    break;
             }
-            Console.WriteLine("{0} de {1} de {2}" d, m, a);
+
+            Console.WriteLine("{0} de {1} de {2}", d, m, a);
         }
     }
 }
